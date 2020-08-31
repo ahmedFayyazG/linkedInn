@@ -5,12 +5,14 @@ const auth = require("./routes/api/auth");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 const passport = require("passport");
+const cors = require("cors");
 
 const bodyParser = require("body-parser");
 
 const app = express();
 
 //MiddleWares
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: false,

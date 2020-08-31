@@ -202,6 +202,10 @@ router.post(
   }
 );
 
+router.get("/test", (req, res) => {
+  res.send("testing OK!");
+});
+
 // @route   POST api/profile/education
 // @desc    Add education to profile
 // @access  Private
